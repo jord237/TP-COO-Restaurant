@@ -1,7 +1,7 @@
 package restaurant;
 
 public interface Article {
-	int getPrix();
-	String toString();
+	public abstract int getPrix();
+	public abstract String toString();
 	
 }

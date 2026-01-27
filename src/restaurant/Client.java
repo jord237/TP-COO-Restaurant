@@ -1,7 +1,7 @@
 package restaurant;
 
 public class Client {
-	String nom;
+	private String nom;
 	
 	
 	public Client(String nom) {

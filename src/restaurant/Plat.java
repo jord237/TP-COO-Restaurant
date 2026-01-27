@@ -1,8 +1,8 @@
 package restaurant;
 
 public class Plat implements Article {
-	String nom;
-	int prix;
+	private String nom;
+	private int prix;
 	
 	
 	public Plat(String nom,int prix) {

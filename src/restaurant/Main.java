@@ -18,6 +18,10 @@ public class Main {
 			    "crème brûlée");
 
 			System.out.println(rc);
+			
+			Table t1 = new Table(4);
+			
+			System.out.println(t1);
 	}
 	
 

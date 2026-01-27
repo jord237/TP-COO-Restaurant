@@ -28,7 +28,7 @@ public RepasComplet(String nom,int prix,String entree,String platPrincipal,Strin
 	@Override
 	public int getPrix() {
 		// TODO Auto-generated method stub
-		return 0;
+		return prix;
 	}
 	
 	
