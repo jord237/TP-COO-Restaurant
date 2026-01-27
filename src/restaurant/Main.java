@@ -22,6 +22,9 @@ public class Main {
 			Table t1 = new Table(4);
 			
 			System.out.println(t1);
+			Restaurant r =new Restaurant();
+			r.addTable(4);
+			r.addTable(6);
 	}
 	
 

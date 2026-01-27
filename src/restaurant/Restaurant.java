@@ -15,6 +15,10 @@ public class Restaurant {
 		this.tables = new ArrayList<>();
 		this.tablesReservees = new HashMap<>();
 	}
+	public void addTable(int capacite) {
+		Table table = new Table(capacite);
+		tables.add(table);
+	}
 }
 
 	
