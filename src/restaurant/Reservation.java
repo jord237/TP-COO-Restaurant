@@ -1,6 +1,7 @@
 package restaurant;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Reservation {
@@ -14,6 +15,7 @@ public class Reservation {
 		this.heureArrivee = heureArrivee;
 		this.client = client;
 		this.nbPlacesReservee = nbPlacesReservee;
+		 this.articlesCommandes = new ArrayList<>();
 	}
 	
 	public void addCommande(Article article) {
@@ -33,6 +35,22 @@ public class Reservation {
 			articlesCommandes.add(plat);
 		}
 	}
+	
+	@Override
+	public String toString() {
+
+	    String resultat = "Réservation de " + client
+	            + " (" + nbPlacesReservee + ", " + heureArrivee + ")\n";
+
+	    for (Article article : articlesCommandes) {
+	        resultat += article + "\n";
+	    }
+
+	    resultat += "Total : " + montantFacture() + "€";
+
+	    return resultat;
+	}
+
 	
 	
 }

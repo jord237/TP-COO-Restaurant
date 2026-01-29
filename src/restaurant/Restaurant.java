@@ -81,6 +81,26 @@ public class Restaurant {
 	        reservation.addCommande(plat, quantite);
 	    }
 	}
+	
+	@Override
+	public String toString() {
+
+	    String resultat = "";
+
+	    for (Table table : tables) {
+
+	        resultat += table + "\n";
+
+	        if (tableEstReservee(table)) {
+	            resultat += tablesReservees.get(table) + "\n\n";
+	        } else {
+	            resultat += "vide\n\n";
+	        }
+	    }
+
+	    return resultat;
+	}
+
 
 }
 
