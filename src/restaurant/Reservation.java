@@ -28,6 +28,11 @@ public class Reservation {
 		}
 		return sommeFacture;
 	}
+	public void addCommande (Plat plat, int quantite) {
+		for(int i = 0; i<quantite; i++) {
+			articlesCommandes.add(plat);
+		}
+	}
 	
 	
 }

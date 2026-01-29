@@ -1,5 +1,6 @@
 package restaurant;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -48,6 +49,37 @@ public class Restaurant {
 	    }
 
 	    return meilleureTable;
+	}
+	public Table reserver(Client client, int nombrePlaces, LocalTime heureArrivee) {
+		
+		Table table = chercherTableCapaciteSuffisante(nombrePlaces);
+		
+		
+		if (table == null ) {
+			return null;
+		}
+		
+		Reservation reservation = new Reservation( heureArrivee, client,nombrePlaces);
+		
+		 tablesReservees.put(table, reservation);
+		 return table;
+	}
+	
+	public void addCommande(Article article, Table table) {
+		Reservation reservation = tablesReservees.get(table);
+		
+		if (reservation !=null) {
+			reservation.addCommande(article);
+		}
+	}
+	
+	public void addCommande(Plat plat, int quantite, Table table) {
+
+	    Reservation reservation = tablesReservees.get(table);
+
+	    if (reservation != null) {
+	        reservation.addCommande(plat, quantite);
+	    }
 	}
 
 }
